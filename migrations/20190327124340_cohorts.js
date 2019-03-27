@@ -8,5 +8,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableExists('cohorts');
+  return knex.schema.dropTableIfExists('cohorts');
 };
