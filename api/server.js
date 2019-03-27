@@ -3,6 +3,7 @@ const helmet = require('helmet');
 
 //cohorts and students
 const cohortsRouter = require('./cohorts/cohorts.js');
+const studentsRouter = require('./students/students.js');
 
 const server = express();
 
@@ -14,5 +15,6 @@ server.get('/', (req, res) => {
 });
 
 server.use('/api/cohorts', cohortsRouter);
+server.use('/api/students', studentsRouter);
 
 module.exports = server;
